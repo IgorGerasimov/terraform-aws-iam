@@ -1,16 +1,42 @@
-# terraform-aws-iam
+## Configuration in this directory creates IAM group with users who are allowed to assume IAM roles.
 
+Requirments: 
+ - terraform 0.13 ( tested on 0.13.2) `https://github.com/tfutils/tfenv`
+ - aws subscription
+ - aws credentials
 
+# Usage
 
+To run this example you need to execute:
+
+```bash
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
+
+Or the same with using of `Makefile`
+
+```
+make all - will validate and apply default configuration 
+make destroy - destroy all resources and cleanup output files
+```
 
 1. Which resources will you use, and how will they interact?
    `AWS IAM` ( users, groups, policy and roles )
+
+2. `terraform apply` will create 
+
+   - users and groups 
+     `Eugene, Milo, Abigail, Aidan` as `Developers` 
+     `Santiago, Felix, Morgan`      as `Ops`
+
+   - assign users to the groups
+   - creates assumable roles for each group with permissions for example
+     `developers` and `ops` 
    
-   - creates
-
-   `AWS Terraform default module IAM` `https://registry.terraform.io/modules/terraform-aws-modules/iam/aws/2.18.0`
-
-2. 
+   
+  
 
 
 
@@ -21,6 +47,7 @@
 
 
 
+Small useful tricks 
 
+`Clean .terraform of huge files` - `git rm --cached --ignore-unmatch .terraform/`
 
-Small useful 
