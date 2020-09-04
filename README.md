@@ -23,7 +23,13 @@ make destroy - destroy all resources and cleanup output files
 ```
 
 1. Which resources will you use, and how will they interact?
-   `AWS IAM` ( users, groups, policy and roles )
+     * The resources used are;
+     * AWS Organizations
+       - Consolidates and centrally manages multiple AWS accounts.
+       - We will create four accounts within the organization.
+       - users account only for user management
+      * IAM
+    - Create IAM groups, roles, and policies for controlling access to the AWS accounts and their respective resources
 
 2. `terraform apply` will create 
 
