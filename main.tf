@@ -53,8 +53,7 @@ module "iam_assumable_role_develop" {
   version = "~> 2.0"
 
   trusted_role_arns = [
-    "arn:aws:iam::873773012348:root",
-    "arn:aws:iam::873773012348:user/i.gerasimow@rickerlyman.com",
+    "arn:aws:iam::873772212348:user/example",
   ]
 
   create_role = true
@@ -73,8 +72,7 @@ module "iam_assumable_role_ops" {
   version = "~> 2.0"
 
   trusted_role_arns = [
-    "arn:aws:iam::873773012348:root",
-    "arn:aws:iam::873773012348:user/i.gerasimow@rickerlyman.com",
+    "arn:aws:iam::873773222348:user/example",
   ]
 
   create_role = true
